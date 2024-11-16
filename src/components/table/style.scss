@@ -11,16 +11,22 @@
 }
 
 .col {
-  padding: 0 10px;
+  padding: 0 30px;
+  flex: 1;
 }
 
 .table {
   height: 900px;
   overflow: auto;
-  width: 600px;
+  width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
+  background-color: $dark-gray;
+}
+
+.tableContainer {
+  width: 60%;
 }
 
 .noSearchResults {
@@ -29,9 +35,13 @@
 }
 
 .tableHeader {
+  background-color: $secondary-color;
   .row {
     &:hover {
       background-color: transparent;
     }
+  }
+  .col {
+    padding: 0 20px;
   }
 }
