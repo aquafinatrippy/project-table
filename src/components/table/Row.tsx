@@ -1,4 +1,4 @@
-import './style.scss'
+import "./style.scss";
 
 type RowProps = {
   name: string;
@@ -7,9 +7,13 @@ type RowProps = {
 
 export const Row = ({ name, code }: RowProps) => {
   return (
-    <div className='row'>
-      <div className='col'>{name}</div>
-      <div className='col'>{code}</div>
+    <div className="row">
+      <div className="col">
+        <p>{name}</p>{" "}
+      </div>
+      <div className="col">
+        <p>{code}</p>
+      </div>
     </div>
   );
 };

@@ -1,15 +1,37 @@
+@import "../../_variables.scss";
+
 .row {
   display: flex;
   padding: 10px;
   gap: 20px;
   justify-content: space-between;
+  &:hover {
+    background-color: $primary-color;
+  }
 }
 
 .col {
-//   padding: 10px;
+  padding: 0 10px;
 }
 
 .table {
   height: 900px;
   overflow: auto;
+  width: 600px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.noSearchResults {
+  width: 100%;
+  text-align: center;
+}
+
+.tableHeader {
+  .row {
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }

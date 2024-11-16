@@ -1,12 +1,15 @@
 import { useReactiveVar } from "@apollo/client";
 import { makeVar } from "@apollo/client";
-import { GetCountriesQueryVariables } from "../gql/graphql";
+
+type FilterType = {
+  code?: string;
+};
 
 const filterVar = makeVar({});
 
 export const useFilters = () => {
-  const filters: { code?: string } = useReactiveVar(filterVar);
-  const setFilters = (newFilters: GetCountriesQueryVariables) => {
+  const filters: FilterType = useReactiveVar(filterVar);
+  const setFilters = (newFilters: FilterType) => {
     if (!newFilters.code) filterVar({});
     else filterVar({ ...filters, ...newFilters });
   };
