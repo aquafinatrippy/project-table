@@ -1,9 +1,12 @@
 .row {
   display: flex;
+  padding: 10px;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .col {
-  padding: 10px;
+//   padding: 10px;
 }
 
 .table {

@@ -1,6 +1,6 @@
-  query GetCountries {
-    countries {
-      code
-      name
-    }
+query GetCountries($code: StringQueryOperatorInput) {
+  countries(filter: { code: $code }) {
+    code
+    name
   }
+}
