@@ -1,6 +1,6 @@
 import "./index.scss";
-import { FilterBar } from "./components/filter-bar";
-import { Table } from "./components/table";
+import { FilterBar } from "./components/Filter-bar";
+import { Table } from "./components/Table";
 
 function App() {
   return (
