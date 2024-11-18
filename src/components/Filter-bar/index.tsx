@@ -7,13 +7,13 @@ export const FilterBar = () => {
   const { filters, setFilters } = useFilters();
 
   const updateSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    const code: string = e.target.value.toUpperCase();
+    const code: string = e.target.value;
     setFilters({ code });
   };
 
   return (
-    <div className="filterBar" data-testid='filter-bar'>
-      <h3 data-testid='filter-bar-title'>Filter</h3>
+    <div className="filterBar" data-testid="filter-bar">
+      <h3 data-testid="filter-bar-title">Filter</h3>
       <div>
         <Input
           onChange={updateSearch}

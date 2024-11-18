@@ -11,6 +11,8 @@ describe("Input Component", () => {
     render(<Input label="Test Label" value="" onChange={() => {}} />);
     const labelElement = screen.getByText(/test label/i);
     expect(labelElement).toBeInTheDocument();
+    expect(screen.getByTestId("input-container")).toBeInTheDocument();
+    expect(screen.getByTestId("input")).toBeInTheDocument();
   });
 
   test("calls onChange handler when input value changes", () => {

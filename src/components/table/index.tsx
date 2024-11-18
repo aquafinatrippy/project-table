@@ -12,7 +12,7 @@ export const Table = () => {
     GetCountriesDocument,
     Object.keys(filters).length
       ? {
-          variables: { code: { eq: filters.code } },
+          variables: { code: { eq: filters.code?.toUpperCase() } },
         }
       : {}
   );

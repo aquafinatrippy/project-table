@@ -9,15 +9,20 @@ type InputProps = {
 
 export const Input = ({ label, value, onChange }: InputProps) => {
   return (
-    <div className="input-wrapper">
+    <div className="input-wrapper" data-testid="input-container">
       <input
-        data-testid='input'
+        data-testid="input"
         className="input-field"
         type="text"
         value={value}
         onChange={onChange}
       />
-      <label data-testid='input-label' className={`input-label ${value ? "filled" : ""}`}>{label}</label>
+      <label
+        data-testid="input-label"
+        className={`input-label ${value ? "filled" : ""}`}
+      >
+        {label}
+      </label>
     </div>
   );
 };
