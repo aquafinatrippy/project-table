@@ -1,4 +1,4 @@
-@import "../../variables";
+@use "../../_variables.scss" as *;
 
 .rect {
   border-radius: 12px;

@@ -1,4 +1,4 @@
-@import "../../variables";
+@use "../../_variables.scss" as *;
 
 .input-wrapper {
   position: relative;
@@ -32,6 +32,7 @@
   
   padding: 0 5px;
   transition: top 0.3s ease, font-size 0.3s ease;
+  pointer-events: none;
 
   &.filled {
     top: -12px;
