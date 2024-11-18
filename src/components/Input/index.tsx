@@ -11,12 +11,13 @@ export const Input = ({ label, value, onChange }: InputProps) => {
   return (
     <div className="input-wrapper">
       <input
+        data-testid='input'
         className="input-field"
         type="text"
         value={value}
         onChange={onChange}
       />
-      <label className={`input-label ${value ? "filled" : ""}`}>{label}</label>
+      <label data-testid='input-label' className={`input-label ${value ? "filled" : ""}`}>{label}</label>
     </div>
   );
 };

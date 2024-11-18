@@ -12,8 +12,8 @@ export const FilterBar = () => {
   };
 
   return (
-    <div className="filterBar">
-      <h3>Filter</h3>
+    <div className="filterBar" data-testid='filter-bar'>
+      <h3 data-testid='filter-bar-title'>Filter</h3>
       <div>
         <Input
           onChange={updateSearch}
