@@ -7,7 +7,7 @@ type RowProps = {
 
 export const Row = ({ name, code }: RowProps) => {
   return (
-    <div className="row">
+    <div className="row" data-testid={`country-${code}`}>
       <div className="col">
         <p>{name}</p>{" "}
       </div>
