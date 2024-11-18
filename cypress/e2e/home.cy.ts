@@ -1,4 +1,4 @@
-describe('Input component tests', () => {
+describe('Home page, elements loading', () => {
   beforeEach(() => {
     cy.visit('/');
   });

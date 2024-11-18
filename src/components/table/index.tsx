@@ -22,7 +22,7 @@ export const Table = () => {
       <TableHeader />
       <div className="table" data-testid="table-content">
         {!data?.countries.length && !loading ? (
-          <div className="noSearchResults">
+          <div className="noSearchResults" data-testid="no-results-text">
             <p>No search results</p>
           </div>
         ) : (
