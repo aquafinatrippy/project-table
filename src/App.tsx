@@ -1,14 +1,8 @@
 import "./index.scss";
-import { FilterBar } from "./components/Filter-bar";
-import { Table } from "./components/Table";
+import { Home } from "./views/Home";
 
 function App() {
-  return (
-    <div className="content">
-      <FilterBar />
-      <Table />
-    </div>
-  );
+  return <Home />
 }
 
 export default App;
