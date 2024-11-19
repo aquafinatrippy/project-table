@@ -18,7 +18,7 @@ export const Table = () => {
   );
 
   return (
-    <div className="tableContainer" data-testid="table-container">
+    <div className="table-container" data-testid="table-container">
       <TableHeader />
       <div className="table" data-testid="table-content">
         {!data?.countries.length && !loading ? (

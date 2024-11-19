@@ -1,18 +1,29 @@
 .content {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    width: 80%;
-    justify-content: space-between;
-    height: 100%;
-    padding: 100px 0;
+  display: flex;
+  gap: 80px;
+  width: 100%;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 80%;
+  justify-content: space-between;
+  height: 100%;
+  padding: 100px 0;
+  position: relative;
+}
+
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  @media (max-width: 900px) {
-    .content {
-      flex-direction: column;
-      width: 100%;
-      padding: 50px 0;
-  
-    }
-  }
+}

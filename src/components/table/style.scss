@@ -25,8 +25,12 @@
   background-color: $dark-gray;
 }
 
-.tableContainer {
-  width: 60%;
+.light-mode .table {
+  background-color: $white-secondary-background;
+}
+
+.table-container {
+  width: 100%;
 }
 
 .noSearchResults {
@@ -34,7 +38,10 @@
   text-align: center;
 }
 
-.tableHeader {
+.light-mode .table-header {
+  background-color: $white-dark-gray;
+}
+.table-header {
   background-color: $secondary-color;
   .row {
     &:hover {
@@ -47,7 +54,7 @@
 }
 
 @media (max-width: 900px) {
-  .tableContainer {
+  .table-container {
     width: 100%;
   }
 }
