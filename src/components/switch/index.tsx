@@ -21,6 +21,7 @@ export const Switch = ({
         className="switch-checkbox"
         id="switch"
         type="checkbox"
+        data-testid="switch"
       />
       <label
         style={{ background: isOn ? "#333333" : "#708090" }}

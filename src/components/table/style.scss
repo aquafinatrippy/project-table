@@ -16,7 +16,8 @@
 }
 
 .table {
-  height: 900px;
+  max-height: 70vh;
+  height: auto;
   overflow: auto;
   width: 100%;
   gap: 20px;
@@ -56,5 +57,8 @@
 @media (max-width: 900px) {
   .table-container {
     width: 100%;
+  }
+  .table {
+    max-height: 50vh;
   }
 }
