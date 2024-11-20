@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { FilterBar } from "../../components/Filter-bar";
-import { Switch } from "../../components/switch";
+import { Switch } from "../../components/Switch";
 import { Table } from "../../components/Table";
 import "./style.scss";
 import { RootState } from "../../store/store";
