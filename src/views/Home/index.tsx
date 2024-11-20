@@ -5,19 +5,19 @@ import { Table } from "../../components/Table";
 import "./style.scss";
 import { RootState } from "../../store/store";
 import { toggleSwitch } from "../../store/UI/uiSlice";
-import { useEffect } from "react";
+import { useQuery } from "@apollo/client";
+import { GetCountriesDocument } from "../../gql/graphql";
+import { useFilters } from "../../hooks/useFilters";
 
 export const Home = () => {
-  const isDarkModeOn = useSelector((state: RootState) => state.ui.darkMode);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (!isDarkModeOn) {
-      document.body.classList.add('light-mode');
-    } else {
-      document.body.classList.remove('light-mode');
-    }
-  }, [isDarkModeOn]);
+  const isDarkModeOn = useSelector((state: RootState) => state.ui.darkMode);
+  const { filters } = useFilters();
+  const { data, loading } = useQuery(GetCountriesDocument, {
+    variables: Object.keys(filters).length
+      ? { code: { eq: filters.code?.toUpperCase() } }
+      : {},
+  });
 
   return (
     <div className="home-container">
@@ -31,7 +31,7 @@ export const Home = () => {
       </div>
       <div className="content">
         <FilterBar />
-        <Table />
+        <Table data={data?.countries || []} loading={loading} />
       </div>
     </div>
   );

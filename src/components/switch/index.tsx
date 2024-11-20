@@ -5,6 +5,7 @@ type SwitchProps = {
   handleToggle: () => void;
   onIcon: string;
   offIcon: string;
+  id?: string;
 };
 
 export const Switch = ({
@@ -12,21 +13,26 @@ export const Switch = ({
   handleToggle,
   onIcon,
   offIcon,
+  id = "switch",
 }: SwitchProps) => {
+  const switchId = `${id}-${Math.random().toString(36)}`;
+
   return (
     <div className="switch-container">
       <input
         checked={isOn}
         onChange={handleToggle}
         className="switch-checkbox"
-        id="switch"
+        id={switchId}
         type="checkbox"
         data-testid="switch"
+        aria-checked={isOn}
+        aria-label="Toggle switch"
       />
       <label
         style={{ background: isOn ? "#333333" : "#708090" }}
         className="switch-label"
-        htmlFor="switch"
+        htmlFor={switchId}
       >
         <span className="switch-button">
           {isOn ? (
@@ -38,4 +44,8 @@ export const Switch = ({
       </label>
     </div>
   );
+};
+
+Switch.defaultProps = {
+  id: "switch",
 };
